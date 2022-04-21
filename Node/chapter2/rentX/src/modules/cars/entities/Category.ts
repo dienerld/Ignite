@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import {
+  Column, CreateDateColumn, Entity, PrimaryColumn
+} from 'typeorm';
 
 @Entity('categories')
 class Category {
@@ -9,7 +11,7 @@ class Category {
     name: string;
   @Column()
     description: string;
-  @Col
+  @CreateDateColumn()
     created_at: Date;
 
   constructor() {
